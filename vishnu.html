@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishnu Vardhan | Adoption Coordinator</title>
+
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Poppins', sans-serif; line-height:1.6; background:#fffaf5; color:#333; }
+
+  header {
+    background: #ffbf80;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+  }
+  header h1 { font-size:2.5rem; margin-bottom:10px; }
+  header p { font-size:1.2rem; }
+
+  .content { max-width:1000px; margin:40px auto; padding:0 20px; }
+
+  /* About Section */
+  .about {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    align-items:center;
+    margin-bottom:50px;
+  }
+  .about img {
+    width:250px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  }
+  .about-text {
+    flex:1;
+    min-width:250px;
+  }
+  .about-text h2 { color:#ff944d; margin-bottom:10px; }
+  .about-text p { color:#555; font-size:1.05rem; margin-bottom:10px; }
+
+  /* Responsibilities Section */
+  .responsibilities {
+    margin-bottom:50px;
+  }
+  .responsibilities h2 {
+    text-align:center;
+    color:#ff944d;
+    margin-bottom:30px;
+  }
+  .responsibility-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+  .responsibility-box {
+    background:#fff;
+    border-radius:12px;
+    padding:25px 20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+    transition: transform 0.3s;
+  }
+  .responsibility-box:hover { transform:scale(1.05); }
+  .responsibility-box h3 { color:#ff944d; margin-bottom:12px; }
+  .responsibility-box p { color:#555; }
+
+  /* Contact Section */
+  .contact {
+    margin-bottom:50px;
+    background:#fff5e6;
+    padding:30px 20px;
+    border-radius:12px;
+    text-align:center;
+  }
+  .contact h2 { color:#ff944d; margin-bottom:20px; }
+  .contact p { margin-bottom:15px; }
+  .contact a {
+    display:inline-block;
+    padding:12px 25px;
+    background:#ff944d;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition: background 0.3s;
+  }
+  .contact a:hover { background:#ff7a1f; }
+
+  footer {
+    background: #ffbf80;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+  }
+
+  @media(max-width:700px) {
+    .about { flex-direction:column; align-items:center; }
+    .about img { width:70%; }
+  }
+  .sidebar {
+  position: fixed;            /* keeps it static even when scrolling */
+  top: 50%;                   /* middle of the page vertically */
+  left: 20px;                 /* slight space from the left edge */
+  transform: translateY(-50%);/* centers the whole sidebar vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;                  /* space between lines */
+  z-index: 1000;              /* keeps it on top */
+}
+
+/* each line (the clickable link) */
+.sidebar a {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.sidebar a:hover {
+  width: 30px;
+  background-color: #333;
+}
+</style>
+</head>
+
+<body>
+<div class="sidebar">
+  <a href="petadoptionpage.html"></a>
+ 
+  <a href="WelcomeHome.html"></a>
+  <a href="shop.html"></a>
+  <a href="contact.html"></a>
+</div>
+
+<header>
+  <h1>Vishnu Vardhan</h1>
+  <p>Adoption Coordinator | Helping Pets Find Their Forever Homes</p>
+</header>
+
+<div class="content">
+
+  <!-- About Section -->
+  <section class="about">
+    <img src="./images/vikram.jpeg" alt="Vishnu Vardhan">
+    <div class="about-text">
+      <h2>About Vishnu</h2>
+      <p>Vishnu Vardhan is our dedicated Adoption Coordinator, connecting pets with loving families. He ensures every adoption process is smooth, transparent, and safe for both pets and adopters.</p>
+      <p>With deep knowledge of animal behavior and welfare, Vishnu provides guidance, support, and follow-ups to guarantee happy, lifelong matches.</p>
+    </div>
+  </section>
+
+  <!-- Responsibilities Section -->
+  <section class="responsibilities">
+    <h2>Key Responsibilities</h2>
+    <div class="responsibility-grid">
+      <div class="responsibility-box">
+        <h3>Adoption Screening</h3>
+        <p>Evaluates applications to ensure pets go to suitable homes.</p>
+      </div>
+      <div class="responsibility-box">
+        <h3>Meet & Greet Coordination</h3>
+        <p>Organizes safe sessions for adopters to meet their prospective pets.</p>
+      </div>
+      <div class="responsibility-box">
+        <h3>Home Visits</h3>
+        <p>Conducts home checks to confirm safe and comfortable living spaces.</p>
+      </div>
+      <div class="responsibility-box">
+        <h3>Follow-ups & Support</h3>
+        <p>Provides guidance after adoption to ensure smooth transitions and pet welfare.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Vishnu</h2>
+    <p>Have questions about adopting a pet? Reach out to Vishnu for guidance and assistance.</p>
+    <a href="contact.html">Contact Now</a>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 Vishnu Vardhan | Adoption Coordinator
+</footer>
+
+</body>
+</html>

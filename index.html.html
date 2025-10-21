@@ -1,0 +1,1324 @@
+<html>
+
+<head>
+    <title>pet adoption</title>
+
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+  
+
+
+    <style>
+				
+				* {
+			  margin: 0;
+			  padding: 0;
+			  box-sizing: border-box;
+			}
+				
+					html {
+						scroll-behavior: smooth;
+					}
+
+					body {
+						font-family: "Poppins", sans-serif;
+						color: #45474F;
+						background-color: #FAFAFA;
+						
+						vertical-align: baseline;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						text-rendering: optimizeLegibility;
+						font-size: clamp(14px, 0.833vw, 22px);
+						font-style: normal;
+						font-weight: 400;
+						line-height: 150%;
+						height: 100%;
+						
+						
+						
+					}
+
+					.h1 {
+						color: #0C0C0D;
+						margin-bottom: 0;
+						font-family: "Montserrat", sans-serif;
+						font-size: clamp(64px, 5vw, 100px);
+						font-weight: 700;
+						line-height: 120%;
+						letter-spacing: -1px;
+					}
+
+					.br-56 {
+						border-radius: clamp(24px, 2.917vw, 84px);
+					}
+
+					.cus-btn-2 {
+						position: relative;
+						display: inline-flex;
+						align-items: center;
+						gap: 4px;
+						padding: clamp(10px, 0.833vw, 24px) clamp(30px, 2.083vw, 54px);
+						font-size: clamp(14px, 0.833vw, 22px);
+						font-family: "Poppins", sans-serif;
+						font-weight: 600;
+						text-transform: uppercase;
+						line-height: 120%;
+						background-color: #FF782C;
+						border-radius: clamp(24px, 1.667vw, 64px);
+						color: #FAFAFA;
+						cursor: pointer;
+						overflow: hidden;
+						text-decoration: none;
+					}
+
+					.header {
+						
+						position:absolute;
+						top: 0;
+						left: 0;
+						z-index: 50;
+						padding:15px 20px;
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						background: transparent;
+						
+					}
+						body {
+							overflow-x: hidden; /* stops content from going outside viewport */
+						}
+					.header-buttons {
+						display: flex;
+						gap: 20px;
+						align-items: center;
+					}
+
+					.main-menu__nav ul {
+						display: flex;
+						justify-content: center;
+						list-style: none;
+						margin: 0;
+						padding: 0;
+						gap: 35px;
+					}
+
+					.main-menu__nav ul li a {
+						text-decoration: none;
+						color: #007BFF; 
+						font-weight: 800;
+						 transition: color 0.3s ease-in-out;
+					}
+
+
+					.main-menu__nav ul li a:hover {
+					  color: #0056b3;  /* darker blue */
+					}
+					.header-logo-box img {
+						background: transparent;
+					}
+
+					.hero-banner {
+						background: linear-gradient(278deg, #ffcce6, #ffe6f0);
+						height: 100vh;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						text-align: center;
+						flex-direction: column;
+						padding-top:100px;
+						  transition: background 0.3s ease-in-out;
+						
+					}
+					.hero-banner:hover{
+					background: linear-gradient(278deg, #ffb3d1, #ffccff);
+					}
+
+					.banner-btn {
+						margin-bottom: 2rem;
+					}
+
+					.customer-block {
+						text-align: left;
+						margin-top: 30px;
+						max-width: 800px;  
+						padding: 10px 20px;  /* small padding inside */
+						box-sizing: border-box;
+						width: 100%;
+					}
+
+					.images-container {
+						display: flex;
+						gap: 10px;
+						margin-bottom: 10px;
+						overflow:hidden;
+						
+						flex-wrap: wrap;
+					}
+
+					.images-container img {
+						width: 60px;
+						height: 60px;
+						border-radius: 50%;
+						 object-fit: cover;
+					}
+
+					.hero-middle h1 {
+						margin-bottom: 20px;
+					}
+
+					.hero-middle .nav {
+						display: inline-flex;
+						background: rgba(250, 250, 250, 0.4);
+						padding: 8px 12px;
+						gap: 12px;
+						border-radius: clamp(24px, 1.667vw, 64px);
+						margin-bottom: 20px;
+					}
+
+					.hero-middle .nav .nav-item .nav-link {
+						color: #0C0C0D;
+					}
+
+					.hero-middle .nav .nav-item .nav-link.active {
+						background: #FF782C;
+						color: #FAFAFA;
+						transition: all 0.3s ease-in-out;
+						border-radius: clamp(24px, 1.667vw, 64px);
+					}
+
+					.hero-middle img {
+						max-width: 400px;
+						height: auto;
+						margin: 10px;
+					}
+
+					.paragraph-section {
+						max-width: 800px;
+						margin: 20px auto 50px;
+						text-align: center;
+						font-size: clamp(16px, 1vw, 20px);
+						line-height: 1.6;
+						color: #45474F;
+					}
+
+					.paragraph-section p {
+						margin-bottom: 15px;
+					}
+					 
+
+					.footer-link {
+						color: #333;
+						text-decoration: none;
+						transition: color 0.3s;
+					}
+
+					.footer-link:hover {
+						color: white; 
+					}
+
+					/* Social icons hover effect */
+					.footer .social-icon {
+						display: inline-block;
+						font-size: 20px;
+						transition: color 0.3s, transform 0.3s;
+					}
+
+					.footer .social-icon:hover {
+						color: #0d6efd;  /* color changes */
+						transform: scale(1.2); /* slight pop effect */
+					}
+				 .footer {
+				  background-color: #a2c3c3;
+				  color: black;
+				  text-align: center;
+				  padding: 20px;
+				  transition: background-color 0.3s;
+				}
+
+				/* Hover effect on footer */
+				.footer:hover {
+				  background-color:#d0e1e1 ; /* lighter gray on hover */
+				}
+					button {
+				  padding: 10px 20px;
+				  border: none;
+				  background-color: #ff6600; /* blue */
+				  color: white;
+				  font-size: 16px;
+				  border-radius: 5px;
+				  cursor: pointer;
+				  transition: background-color 0.3s;
+				}
+
+				button:hover {
+				  background-color: #ff8533; /* darker blue */
+				}
+
+				button.active {
+				  background-color: #28a745; /* green */
+				}
+
+				button.active:hover {
+				  background-color: #218838; /* darker green */
+				}
+				.customer-block h5 {
+				margin-top: 10px;
+				font-size: 18px;
+				word-break: break-word; 
+			}
+
+
+			/* Adoption Steps Section */
+			.adoption-steps {
+				padding: 60px 20px;
+				background-color: #ffffff;
+				text-align: center;
+			}
+
+			.adoption-steps h2 {
+				margin-bottom: 50px;
+				color: #333;
+			}
+
+			.steps-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 30px;
+			}
+
+			.step-card {
+				flex: 1 1 200px;
+				background-color: #f8f9fa;
+				padding: 30px;
+				border-radius: 15px;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+				transition: transform 0.3s;
+				text-align: center;
+			}
+
+			.step-card:hover {
+				transform: translateY(-10px);
+			}
+
+			.step-icon {
+				font-size: 40px;
+				margin-bottom: 15px;
+			}
+
+			.step-card h4 {
+				margin-bottom: 10px;
+			}
+
+			.step-card p {
+				color: #555;
+				font-size: 14px;
+				line-height: 1.6;
+			}
+				.map-section {
+				padding: 50px 20px;
+				text-align: center;
+				background-color: #f8f9fa;
+			}
+
+			.map-section h2 {
+				margin-bottom: 15px;
+				color: #333;
+			}
+
+			.map-section p {
+				margin-bottom: 20px;
+				color: #555;
+				font-size: 16px;
+			}
+
+			.map-container iframe {
+				border-radius: 15px;
+				width: 50%;
+				max-
+				}
+				
+				.gallery-section {
+				padding: 60px 20px;
+				background-color: #f9f9f9; /* light, friendly background */
+				text-align: center;
+			}
+
+
+			.overlay h4 {
+				margin: 5px 0 0;
+				font-size: 16px;
+			}
+
+			.overlay p {
+				margin: 0;
+				font-size: 14px;
+			}
+
+				
+			/* Awards / Recognition Section */
+			.awards-section {
+				padding: 60px 20px;
+				background-color: #f8f9fa;
+				text-align: center;
+			}
+
+			.awards-section h2 {
+				margin-bottom: 15px;
+				color: #333;
+			}
+
+			.awards-section p {
+				margin-bottom: 40px;
+				font-size: 16px;
+				color: #555;
+			}
+
+			.awards-grid {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 30px;
+			}
+
+			.award-card {
+				background-color: #ffffff;
+				padding: 20px;
+				border-radius: 15px;
+				width: 180px;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+				transition: transform 0.3s;
+				text-align: center;
+			}
+
+			.award-card:hover {
+				transform: translateY(-10px);
+			}
+
+			.award-card img {
+				width: 80px;
+				height: 80px;
+				object-fit: contain;
+				margin-bottom: 10px;
+			}
+
+			.award-card h4 {
+				font-size: 14px;
+				color: #333;
+				margin: 0;
+			}
+
+		/* FAQ Section */
+		.faq-section {
+			max-width: 800px;
+			margin: 40px auto;
+			text-align: left;
+		}
+
+		.faq-section h2 {
+			text-align: center;
+			margin-bottom: 30px;
+			color: #333;
+		}
+
+		.faq-item {
+			margin-bottom: 15px;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+			background-color: #ffffff;
+		}
+
+		.faq-question {
+			width: 100%;
+			background-color:#ff99ff ;
+		   
+			border: none;
+			padding: 18px 20px;
+			text-align: left;
+			font-size: 16px;
+			font-weight: 600;
+			cursor: pointer;
+			position: relative;
+			transition: background-color 0.3s;
+		}
+
+		.faq-question:hover {
+			background-color: #ffb3ff; /* light hover effect */
+		}
+
+		.faq-answer {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease;
+			padding: 0 20px;
+			background-color: #ffffff;
+		}
+
+		.faq-answer p {
+			margin: 15px 0;
+			color: #555;
+		}
+		.team-card:hover {
+			transform: translateY(-10px);
+		}
+		.testimonial-carousel {
+			position: relative;
+			overflow: hidden;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.carousel-track {
+			display: flex;
+			transition: transform 0.5s ease-in-out;
+		}
+
+		.testimonial-card {
+			flex: 0 0 300px;
+			background-color: #ffffff;
+			border-radius: 15px;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+			padding: 20px;
+			margin: 0 15px;
+			text-align: center;
+		}
+
+		.testimonial-img {
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 15px;
+		}
+
+		.testimonial-quote {
+			font-style: italic;
+			color: #555;
+			font-size: 14px;
+			line-height: 1.6;
+			margin-bottom: 10px;
+		}
+
+		.testimonial-name {
+			color: #333;
+			font-weight: 600;
+			font-size: 16px;
+		}
+
+		.carousel-btn {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: #FF782C;
+			color: #fff;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5%;
+			cursor: pointer;
+			font-size: 18px;
+			z-index: 10;
+			transition: background-color 0.3s;
+		}
+
+		.carousel-btn:hover {
+			background-color: #ff9933;
+		}
+
+		.prev-btn {
+			left: 10px;
+		}
+
+		.next-btn {
+			right: 10px;
+		}
+
+		/* Responsive */
+		@media screen and (max-width: 768px) {
+			.testimonial-card {
+				flex: 0 0 250px;
+			}
+		}
+		@media screen and (max-width: 480px) {
+			.testimonial-card {
+				flex: 0 0 200px;
+			}
+		}
+
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+		}
+
+		.gallery-card {
+			position: relative;
+			overflow: hidden;
+			border-radius: 15px;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+			transition: transform 0.3s;
+		}
+
+		.gallery-card:hover {
+			transform: translateY(-5px);
+		}
+
+		.gallery-card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			display: block;
+		}
+
+		.overlay {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: rgba(0,0,0,0.6);
+			color: white;
+			padding: 10px;
+			text-align: center;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		.gallery-card:hover .overlay {
+			opacity: 1;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		#loadMoreBtn {
+			padding: 10px 25px;
+			background-color:  #ffcc66;
+			color: white;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			font-size: 16px;
+			transition: background-color 0.3s;
+		}
+
+		#loadMoreBtn:hover {
+			background-color: #ffd480;
+		}
+		.gallery-section h2 {
+			text-align: center;
+			margin-bottom: 30px; /* Adjust the gap as needed */
+			color: #333;
+		}
+        .newsletter-section {
+		  background: linear-gradient(135deg, #f7f7f7, #eaf6f0);
+		  padding: 60px 20px;
+		  text-align: center;
+		  border-top: 1px  ;
+		}
+
+		.newsletter-section h2 {
+		  font-size: 28px;
+		  margin-bottom: 10px;
+		  color: #333;
+		}
+
+		.newsletter-section p {
+		  color: #555;
+		  margin-bottom: 25px;
+		  font-size: 16px;
+		}
+
+		.newsletter-form {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  gap: 10px;
+		  max-width: 500px;
+		  margin: 0 auto;
+		}
+
+		.newsletter-form input {
+		  padding: 12px;
+		  border: 1px solid #ccc;
+		  border-radius: 6px;
+		  width: 45%;
+		  font-size: 15px;
+		}
+
+		.newsletter-form button {
+		  padding: 12px 25px;
+		  background-color: #ff7f50;
+		  color: white;
+		  border: none;
+		  border-radius: 6px;
+		  font-size: 16px;
+		  cursor: pointer;
+		  transition: background-color 0.3s ease;
+		}
+
+		.newsletter-form button:hover {
+		  background-color: ;
+		}
+
+		.thank-you {
+		  margin-top: 15px;
+		  font-weight: bold;
+		  color: #28a745;
+		  display: none;
+		}
+           .cta-section {
+		  background-color: #f9f9f9;
+		  padding: 60px 20px;
+		  text-align: center;
+		  border-top:  ;
+		  border-bottom:  ;
+		}
+
+		.cta-section h2 {
+		  font-size: 32px;
+		  margin-bottom: 15px;
+		  color: #333;
+		}
+
+		.cta-section p {
+		  font-size: 16px;
+		  color: #555;
+		  margin-bottom: 30px;
+		}
+
+		.cta-buttons {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  gap: 20px;
+		}
+
+		.cta-btn {
+		  padding: 18px 35px;
+		  font-size: 18px;
+		  font-weight: 600;
+		  border-radius: 1px;
+		  text-decoration: none;
+		  color: white;
+		  transition: transform 0.3s, background-color 0.3s;
+		}
+
+		.adopt-btn {
+		  background-color: #e6b3ff;
+		}
+
+		.adopt-btn:hover {
+		  background-color: #218838;
+		  transform: scale(1.05);
+		}
+
+		.donate-btn {
+		  background-color:  #ccefff;
+		}
+
+		.donate-btn:hover {
+		  background-color: #b3e7ff;
+		  transform: scale(1.05);
+		}
+
+		.volunteer-btn {
+		  background-color: #cccc99;
+
+
+		}
+
+		.volunteer-btn:hover {
+		  background-color:#d4d4aa;
+		  transform: scale(1.05);
+		}
+			   .social-feed-section {
+		  padding: 60px 20px;
+		  background-color: #fdf6f0;
+		  text-align: center;
+		}
+
+		.social-feed-section h2 {
+		  font-size: 32px;
+		  margin-bottom: 15px;
+		  color: #333;
+		}
+
+		.social-feed-section p {
+		  font-size: 16px;
+		  color: #555;
+		  margin-bottom: 40px;
+		}
+
+		.social-feed-grid {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  gap: 20px;
+		  margin-bottom: 30px;
+		}
+
+		.social-feed-grid iframe {
+		  border-radius: 15px;
+		  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+		  transition: transform 0.3s;
+		}
+
+		.social-feed-grid iframe:hover {
+		  transform: scale(1.05);
+		}
+
+		.social-feed-btn {
+		  margin-top: 20px;
+		  /* Center the section vertically and horizontally */
+
+
+    </style>
+</head>
+
+<body>
+ 
+     
+    <!-- HEADER -->
+    <header class="header container-fluid">
+        <!-- Left side buttons -->
+        <div class="header-buttons">
+            <a href="appoitment.html" class="cus-btn-2">Appointment</a>
+            <a href="services.html" class="cus-btn-2">Our Service</a>
+        </div>
+
+        <!-- Center navigation -->
+        <nav class="main-menu__nav">
+            <ul class="main-menu__list">
+                <li><a href="WelcomeHome.html">About</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right side logo -->
+        <div class="header-logo-box">
+            <img src="./images/logo3.png" alt="Pet Heaven Logo" width="100">
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner pt-64 mb-80">
+        <div class="banner-wrapper">
+            <div class="row align-items-xl-center parent-row justify-content-center">
+
+                <div class="col-xl-6 col-lg-12">
+                    <div class="hero-middle text-center">
+                        <h1 class="h1">
+                            Best Help For <span><img src="./images/bittu.png" width="80" class="text-image"></span>Your
+                            Lovely Pets
+                            <span><img src="./images/kittu.png" width="80" class="text-image-2"></span>
+                        </h1>
+
+                        <ul class="nav nav-tabs justify-content-center">
+                            <li class="nav-item">
+		                     <a href="pets.html">
+							 <button>For Dogs</button>
+							 </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="cats.html">
+							 <button>For cats</button>
+							 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="otherpets.html">
+							 <button>For otherpets</button>
+							 </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="row g-sm-4 g-2 justify-content-center">
+                                <div class="col-md-4 col-6">
+                                    <img src="./images/dog1" class="br-56 w-100" width="150">
+                                </div>
+                                <div class="col-md-4 col-6">
+                                    <img src="./images/ki" class="br-56 w-100" width="150">
+                                </div>
+                                <div class="col-md-4 col-6 d-sm-block d-none">
+                                    <img src="./images/kk.jpeg" class="br-56 w-100" width="150">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+						
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Paragraph Section -->
+    <section class="paragraph-section">
+	<div style="background-color:#ffffff;  width:100%; padding:40px 20px;">
+        <p style="max-width: 800px; margin: 0 auto; color: #333; font-size:16px; line-height:1.6;">
+		Adopt, don't shop. When you adopt a shelter pet, you save two lives: the one you adopt and the one who takes
+            its place.</p>
+        <p>Pets bring joy, companionship, and unconditional love into our lives. Helping them find a forever home is the
+            greatest gift.</p>
+	</div>
+    </section>
+	<!-- Gallery Section -->
+			<section class="gallery-section">
+				<div class="container">
+					<h2>Pets  Available for Adoption</h2>
+					<div class="gallery-grid">
+
+						<!-- Initial 8 cards -->
+						<div class="gallery-card">
+							<img src="./images/maxy.jpeg" alt="Dog 1">
+							<div class="overlay">
+							 <a href="max.html">
+								<h4>Max</h4></a>
+								<p>2 Years • Labrador</p>
+							</div>
+						</div>
+						<div class="gallery-card">
+							<img src="./images/luna.jpeg" alt="Cat 1">
+							<div class="overlay">
+								<h4>Luna</h4>
+								<p>1 Year • Siamese</p>
+							</div>
+						</div>
+						<div class="gallery-card">
+							<img src="./images/cha.jpeg" alt="Dog 2">
+							<div class="overlay">
+								<h4>rosie</h4>
+								<p>1 Year • Beagle</p>
+							</div>
+						</div>
+						<div class="gallery-card">
+							<img src="./images/belly.jpeg" alt="Cat 2">
+							<div class="overlay">
+								<h4>Bella</h4>
+								<p>1 Year • Persian</p>
+							</div>
+						</div>
+						<div class="gallery-card">
+							<img src="./images/rabbit.jpeg" alt="Dog 3">
+							<div class="overlay">
+								<h4>snowy</h4>
+								<p>12 months • Netherland Dwarf</p>
+							</div>
+						</div>
+						<div class="gallery-card">
+							<img src="./images/parrot.jpeg" alt="Dog 4">
+							<div class="overlay">
+								<h4>kiwi</h4>
+								<p>6 months • Pomeranian</p>
+							</div>
+						</div>
+						<div class="gallery-card">
+							<img src="./images/fish.jpeg" alt="Cat 3">
+							<div class="overlay">
+								<h4>Milo</h4>
+								<p>11 months • Goldfish</p>
+							</div>
+						</div>
+						<div class="gallery-card">
+							<img src="./images/hamster.jpeg" alt="Dog 5">
+							<div class="overlay">
+								<h4>Oliver</h4>
+								<p>10 months • Roborovski</p>
+							</div>
+						</div>
+
+						<!-- Hidden cards (Load More) -->
+						<div class="gallery-card ">
+							<img src="./images/tortoise.jpeg" alt="Dog 6">
+							<div class="overlay">
+								<h4>shelly</h4>
+								<p>9 months • Red-Footed</p>
+							</div>
+						</div>
+						<div class="gallery-card ">
+							<img src="./images/duck.jpeg" alt="Cat 4">
+							<div class="overlay">
+								<h4>Lily</h4>
+								<p>1 Year • Maine Coon</p>
+							</div>
+						</div>
+						<div class="gallery-card ">
+							<img src="./images/bird.jpeg" alt="Dog 7">
+							<div class="overlay">
+								<h4>lolly</h4>
+								<p>1 Year • Zebra Finch</p>
+							</div>
+						</div>
+						<div class="gallery-card ">
+							<img src="./images/pig.jpeg" alt="Cat 5">
+							<div class="overlay">
+								<h4>Zoey</h4>
+								<p>4 months • Juliana Mini</p>
+							</div>
+						</div>
+
+					</div>
+
+				   
+				</div>
+			</section>
+
+				
+	
+			<!-- About Us Section -->
+			<section class="about-us-section" style="padding:60px 20px; background-color:#fdfdfd;">
+				<div class="container">
+					<!-- Section Heading -->
+					<h2 style="text-align:center; margin-bottom:40px; color:#333;">About Us</h2>
+					
+					<!-- Mission Statement -->
+					<div style="max-width:800px; margin:0 auto 50px; text-align:center;">
+						<p style="font-size:16px; color:#555; line-height:1.6;">
+							Our mission is to provide loving homes for pets in need. We believe every animal deserves a second chance and
+							a forever family. Through adoption, education, and care, we aim to create a world where pets are cherished
+							and well-loved.
+						</p>
+					</div>
+					
+					<!-- Team Members -->
+					<div class="team-wrapper" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+						
+						<!-- Team Member 1 -->
+						<div class="team-card" style="flex:1 1 220px; background-color:#ffffff; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; padding:20px; transition: transform 0.3s;">
+							<img src="./images/staff.jpeg" alt="Team Member 1" style="width:160px; height:160px; border-radius:5%; object-fit:cover; margin-bottom:15px;">
+							<a href="ankitha.html"><h4 style="margin-bottom:5px; color:#333;">Ankitha </h4></a>
+							<p style="font-size:14px; color:#777;">Pet Care Specialist</p>
+						</div>
+						
+						<!-- Team Member 2 -->
+						<div class="team-card" style="flex:1 1 220px; background-color:#ffffff; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; padding:20px; transition: transform 0.3s;">
+							<img src="./images/team2.jpeg" alt="Team Member 2" style="width:160px; height:160px; border-radius:5%; object-fit:cover; margin-bottom:15px;">
+							<a href="srinivas.html"><h4 style="margin-bottom:5px; color:#333;">srinivas</h4></a>
+							<p style="font-size:14px; color:#777;">Veterinarian</p>
+						</div>
+						
+						<!-- Team Member 3 -->
+						<div class="team-card" style="flex:1 1 220px; background-color:#ffffff; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; padding:20px; transition: transform 0.3s;">
+							<img src="./images/vikram.jpeg" alt="Team Member 3" style="width:160px; height:160px; border-radius:5%; object-fit:cover; margin-bottom:15px;">
+							<a href="vishnu.html"><h4 style="margin-bottom:5px; color:#333;">vishnu vardhan</h4></a>
+							<p style="font-size:14px; color:#777;">Adoption Coordinator</p>
+						</div>
+						
+						<!-- Team Member 4 -->
+						<div class="team-card" style="flex:1 1 220px; background-color:#ffffff; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; padding:20px; transition: transform 0.3s;">
+							<img src="./images/team.jpeg" alt="Team Member 4" style="width:160px; height:160px; border-radius:5%; object-fit:cover; margin-bottom:15px;">
+							<a href="vikram.html"><h4 style="margin-bottom:5px; color:#333;">Vikram Singh</h4></a>
+							<p style="font-size:14px; color:#777;">Volunteer Manager</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			
+
+
+
+
+
+			<!-- Optional Hover Effect CSS -->
+			<style>
+			.team-card:hover {
+				transform: translateY(-10px);
+			}
+			</style>
+			<!-- Testimonials / Happy Families Section -->
+			<section class="testimonials-section" style="padding:60px 20px; background-color:#f8f9fa;">
+				<div class="container">
+					<h2 style="text-align:center; margin-bottom:50px; color:#333;">Happy Families</h2>
+
+					<div class="testimonial-carousel">
+						<!-- Carousel Wrapper -->
+						<div class="carousel-track">
+							<!-- Testimonial 1 -->
+							<div class="testimonial-card">
+								<img src="./images/family.jpeg" alt="Customer 1" class="testimonial-img">
+								<p class="testimonial-quote">"Adopting from here changed our lives! Max is now a beloved member of our family."</p>
+								<h4 class="testimonial-name">divya & Max</h4>
+							</div>
+
+							<!-- Testimonial 2 -->
+							<div class="testimonial-card">
+								<img src="./images/customer3.jpeg" alt="Customer 2" class="testimonial-img">
+								<p class="testimonial-quote">"Thanks to this shelter, Luna found her forever home. We are so happy!"</p>
+								<h4 class="testimonial-name">Ravi </h4>
+							</div>
+
+							<!-- Testimonial 3 -->
+							<div class="testimonial-card">
+								<img src="./images/customer2.jpeg" alt="Customer 3" class="testimonial-img">
+								<p class="testimonial-quote">"Professional and caring staff. Charlie has brought so much joy to our lives."</p>
+								<h4 class="testimonial-name">Sita & Charlie</h4>
+							</div>
+
+							<!-- Testimonial 4 -->
+							<div class="testimonial-card">
+								<img src="./images/customer4.jpeg" alt="Customer 4" class="testimonial-img">
+								<p class="testimonial-quote">"Adopting Bella was the best decision we ever made. Highly recommend!"</p>
+								<h4 class="testimonial-name">lussi </h4>
+							</div>
+						</div>
+
+						<!-- Carousel Controls -->
+						<button class="carousel-btn prev-btn">&#10094;</button>
+						<button class="carousel-btn next-btn">&#10095;</button>
+					</div>
+				</div>
+			</section>
+			<!-- Testimonials JavaScript -->
+			<script>
+			const track = document.querySelector('.carousel-track');
+			const prevBtn = document.querySelector('.prev-btn');
+			const nextBtn = document.querySelector('.next-btn');
+			let index = 0;
+
+			function updateCarousel() {
+				const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 30; // card + margin
+				track.style.transform = `translateX(-${index * cardWidth}px)`;
+			}
+
+			nextBtn.addEventListener('click', () => {
+				const totalCards = document.querySelectorAll('.testimonial-card').length;
+				if (index < totalCards - Math.floor(track.parentElement.offsetWidth / (document.querySelector('.testimonial-card').offsetWidth + 30))) {
+					index++;
+					updateCarousel();
+				}
+			});
+
+			prevBtn.addEventListener('click', () => {
+				if (index > 0) {
+					index--;
+					updateCarousel();
+				}
+			});
+			</script>
+			
+
+	<!-- Adoption Steps Section -->
+		<section class="adoption-steps">
+			<div class="container">
+				<h2>Adoption Steps</h2>
+				<div class="steps-wrapper">
+
+					<div class="step-card">
+						<div class="step-icon">🐶</div>
+						<a href="choosePet.html"><h4>Choose a Pet</h4></a>
+						
+						<p>Select your favorite pet from our available pets list.</p>
+					</div>
+
+					<div class="step-card">
+						<div class="step-icon">✍️</div>
+						<a href="fillform.html"><h4>Fill an Application</h4></a>
+						
+						<p>Complete the adoption form with your details and preferences.</p>
+					</div>
+
+					<div class="step-card">
+						<div class="step-icon">🤝</div>
+						<a href="meet.html"><h4>Meet & Greet</h4></a>
+						
+						<p>Visit and spend time with the pet to see if it’s a perfect match.</p>
+					</div>
+
+					<div class="step-card">
+						<div class="step-icon">🏠</div>
+						<a href="fillhome.html"><h4>Bring Home</h4></a>
+						
+						<p>Complete the adoption process and welcome your new family member.</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Awards / Recognition Section -->
+		<section class="awards-section">
+			<div class="container">
+				<h2>Awards & Recognition</h2>
+				<p>Recognized by Global Pet Care Society  Animal Welfare Association</p>
+				<div class="awards-grid">
+					<div class="award-card">
+						<img src="./images/best.jpeg" alt="Badge 1">
+						<h4>Best Shelter 2024</h4>
+					</div>
+					<div class="award-card">
+						<img src="./images/awards.jpeg" alt="Certificate 1">
+						<h4>Certified Humane</h4>
+					</div>
+					<div class="award-card">
+						<img src="./images/petwelfare.jpeg" alt="Partnership 1">
+						<h4>Partnered with ABC Pet Org</h4>
+					</div>
+					<!-- Add more awards/badges as needed -->
+				</div>
+			</div>
+		</section>
+		
+
+		 <!-- FAQ Section -->
+		<section class="faq-section section-container">
+			<h2>Frequently Asked Questions</h2>
+			
+			<div class="faq-item">
+				<button class="faq-question">How do I adopt a pet?</button>
+				<div class="faq-answer">
+					<p>To adopt a pet, browse our available pets, fill out an application, meet your chosen pet, and complete the adoption process.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">What documents are required?</button>
+				<div class="faq-answer">
+					<p>You will need a valid ID, proof of address, and sometimes references depending on the pet type.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">Are the pets vaccinated?</button>
+				<div class="faq-answer">
+					<p>Yes, all our pets are fully vaccinated, dewormed, and checked by a veterinarian before adoption.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter / Contact Form Section -->
+		<section class="newsletter-section">
+		  <div class="container">
+			<h2>Subscribe for Pet Updates & Events 🐾</h2>
+			<p>Join our community to receive adoption news, pet care tips, and special event invitations!</p>
+
+			<form id="newsletterForm" class="newsletter-form">
+			  <input type="text" id="name" placeholder="Your Name" required>
+			  <input type="email" id="email" placeholder="Your Email" required>
+			  <button type="submit">Subscribe</button>
+			</form>
+
+			<p id="thankYouMessage" class="thank-you"></p>
+		  </div>
+		</section>
+
+
+		<script>
+		const newsletterForm = document.getElementById('newsletterForm');
+		const thankYouMessage = document.getElementById('thankYouMessage');
+
+		newsletterForm.addEventListener('submit', function(event) {
+		  event.preventDefault();
+
+		  const name = document.getElementById('name').value;
+		  thankYouMessage.textContent = `Thank you, ${name}! You’ve successfully subscribed. 🐶💌`;
+		  thankYouMessage.style.display = 'block';
+
+		  newsletterForm.reset(); // Clear inputs
+		});
+		</script>
+
+
+
+
+
+		<script>
+		const faqQuestions = document.querySelectorAll('.faq-question');
+
+		faqQuestions.forEach(q => {
+			q.addEventListener('click', () => {
+				const answer = q.nextElementSibling;
+				const isOpen = answer.style.maxHeight;
+				
+				// Close all open answers
+				document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
+
+				// Toggle current answer
+				if (!isOpen) {
+					answer.style.maxHeight = answer.scrollHeight + "px";
+				}
+			});
+		});
+		</script>
+
+
+
+
+		<!-- Interactive Map Section -->
+		<section class="map-section">
+			<div class="container">
+				<h2>Our Shelter Locations</h2>
+				<p>Find our shelters and adoption events near you.</p>
+				<div class="map-container">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.657819263276!2d78.41272717485514!3d17.447956687957183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9137e1c1f8b3%3A0x3f70f4971b8323!2sKphb%20Colony%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1696115400000!5m2!1sen!2sin"
+						width="50%" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</section>
+		          
+
+           <!-- Example Buttons & Pet Cards -->
+	
+		<footer class="footer" >
+			<div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; text-align:left; gap:20px;">
+				
+				<!-- About Section -->
+				<div style="flex:1; min-width:200px;">
+					<h3 style="margin-bottom:15px;">About Us</h3>
+					<p>We help pets find loving homes. Adopt, don’t shop! 🐶🐱</p>
+				</div>
+				
+				<!-- Quick Links -->
+				<div style="flex:1; min-width:150px;">
+					<h3 style="margin-bottom:15px;">Quick Links</h3>
+					<ul style="list-style:none; padding:0;">
+						<li><a href="#" class="footer-link">Home</a></li>
+						<li><a href="#" class="footer-link">About</a></li>
+						<li><a href="#" class="footer-link">Pets Available</a></li>
+						<li><a href="#" class="footer-link">Contact</a></li>
+					</ul>
+				</div>
+				
+				<!-- Contact Info -->
+				<div style="flex:1; min-width:200px;">
+					<h3 style="margin-bottom:15px;">Contact</h3>
+					<p>📍 123 Pet Street, Kphb colony, Hyderabad</p>
+					<p>📞 +91 985471256</p>
+					<p>✉️ info@petadoption.com</p>
+				</div>
+				
+				<!-- Social Media -->
+				<div style="flex:1; min-width:150px;">
+					<h3 style="margin-bottom:15px;">Follow Us</h3>
+					<div style="display:flex; gap:10px;">
+						<a href="#" class="footer-link social-icon">🐦</a>
+						<a href="#" class="footer-link social-icon">📘</a>
+						<a href="#" class="footer-link social-icon">📸</a>
+						<a href="#" class="footer-link social-icon">▶️</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Bottom Footer -->
+			<div style="text-align:center; margin-top:30px; font-size:14px;">
+				© 2025 Pet Adoption. All Rights Reserved.
+			</div>
+			
+			
+
+		</footer>
+
+
+		</body>
+		  

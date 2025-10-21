@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bring Home | Pet Adoption</title>
+
+<style>
+  /* Bring Home section styles */
+.bring-home { padding: 48px 18px; background: linear-gradient(180deg,#fffaf2 0%, #ffffff 100%); }
+.bring-home .container { max-width:1200px; margin:0 auto; }
+.bring-home .hero { display:flex; flex-direction:column; gap:28px; align-items:stretch; }
+@media(min-width:900px){ .bring-home .hero { flex-direction:row; align-items:flex-start; justify-content:space-between; } }
+
+.hero-text { flex:1 1 48%; padding: 8px 12px; }
+.hero-text h2 { font-size:2rem; color:#1f2937; margin-bottom:8px; }
+.lead { font-size:1.05rem; color:#374151; margin-bottom:8px; font-weight:600; }
+.sub { color:#6b7280; margin-bottom:16px; }
+
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+.btn-primary, .btn-outline { display:inline-block; padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:600; }
+.btn-primary { background:#ff944d; color:#fff; }
+.btn-primary:hover { background:#ff7a1f; }
+.btn-outline { background:transparent; color:#ff944d; border:2px solid #ffdbb2; }
+.btn-outline:hover { background:#fff2e6; }
+
+/* process column */
+.process { flex:1 1 46%; display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:stretch; }
+@media(max-width:900px){ .process { grid-template-columns: 1fr 1fr; } }
+
+.step { background:#fff; border-radius:12px; padding:14px; box-shadow:0 6px 18px rgba(16,24,40,0.06); text-align:left; display:flex; gap:12px; align-items:flex-start; }
+.step .icon { width:44px; height:44px; flex:0 0 44px; color:#ff944d; }
+.step h4 { margin:0 0 6px; font-size:1rem; color:#111827; }
+.step p { margin:0; color:#6b7280; font-size:0.92rem; }
+
+/* reminders */
+.reminders { margin-top:28px; background:#fff; padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(16,24,40,0.06); max-width:1000px; margin-left:auto; margin-right:auto; }
+.reminders h3 { margin:0 0 10px; color:#1f2937; font-size:1.05rem; }
+.reminders ul { list-style:disc; padding-left:20px; color:#374151; }
+.reminders ul li { margin:8px 0; }
+.reminders .note { margin-top:12px; color:#6b7280; }
+
+/* small screens */
+@media(max-width:600px){
+  .process { grid-template-columns: 1fr 1fr; gap:10px; }
+  .hero-text, .process { padding:6px; }
+  .hero-text h2 { font-size:1.5rem; }
+}
+.sidebar {
+  position: fixed;            /* keeps it static even when scrolling */
+  top: 50%;                   /* middle of the page vertically */
+  left: 20px;                 /* slight space from the left edge */
+  transform: translateY(-50%);/* centers the whole sidebar vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;                  /* space between lines */
+  z-index: 1000;              /* keeps it on top */
+}
+
+/* each line (the clickable link) */
+.sidebar a {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.sidebar a:hover {
+  width: 30px;
+  background-color: #333;
+}
+</style>
+</head>
+<div class="sidebar">
+  <a href="petadoptionpage.html"></a>
+ 
+  <a href="WelcomeHome.html"></a>
+  <a href="shop.html"></a>
+  <a href="contact.html"></a>
+</div>
+
+<body>
+
+  <header>
+    <h1>🐾 Bring Home Your New Family Member 🏡</h1>
+  </header>
+
+ <section class="bring-home" aria-labelledby="bringhome-title">
+  <div class="container">
+    <div class="hero">
+      <div class="hero-text">
+        <h2 id="bringhome-title">Bring Home</h2>
+        <p class="lead">Complete the adoption process and welcome your new family member.</p>
+        <p class="sub">We make it simple: meet your match, submit the application, complete a quick home check and bring them home. Need help? Contact us anytime.</p>
+
+        <div class="cta-row">
+          <a class="btn-primary" href="application.html">Fill Adoption Application</a>
+          <a class="btn-outline" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="process" aria-hidden="false">
+        <div class="step">
+          <!-- simple SVG icon -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L15 8l6 .5-4.5 3.3L18 20l-6-3.5L6 20l1.5-8.2L3 8.5 9 8z" fill="currentColor"/></svg>
+          <h4>1. Meet & Greet</h4>
+          <p>Spend time with the pet at our center or virtual meet.</p>
+        </div>
+
+        <div class="step">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7v13h18V7H3zm2 2h14v9H5V9zM7 2h10v3H7z" fill="currentColor"/></svg>
+          <h4>2. Submit Application</h4>
+          <p>Tell us about your home and experience — quick and secure.</p>
+        </div>
+
+        <div class="step">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z" fill="currentColor"/></svg>
+          <h4>3. Home Check</h4>
+          <p>We confirm the pet’s safety and a smooth transition.</p>
+        </div>
+
+        <div class="step">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6h6l-4.5 3.3L19 20l-7-4-7 4 1.5-8.7L2 8h6z" fill="currentColor"/></svg>
+          <h4>4. Take Home</h4>
+          <p>Finalize paperwork, pick up your new companion and celebrate!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reminders" aria-hidden="false">
+      <h3>Before you bring them home — quick checklist</h3>
+      <ul>
+        <li>Home environment prepared (bed, food, litter, carrier)</li>
+        <li>Family members aware and ready for the new routine</li>
+        <li>First vet appointment booked (within 2 weeks)</li>
+        <li>Understand feeding, grooming and training basics</li>
+        <li>Emergency contact & microchip info updated</li>
+      </ul>
+      <p class="note">Need help with supplies? Check our <a href="shop.html">Starter Kits</a> and adoption guide.</p>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    © 2025 Pet Adoption | Designed with ❤️ for Animal Lovers
+  </footer>
+
+</body>
+</html>

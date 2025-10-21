@@ -1,0 +1,280 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Home</title>
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Poppins", sans-serif; background-color: #FAFAFA; color: #45474F; line-height: 1.6; }
+        h2 { color: #333; margin-bottom: 25px; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .section { padding: 60px 20px; }
+        
+        /* Hero Banner */
+        .hero-banner { 
+            background: linear-gradient(278deg, #d9b3ff ); 
+            height: 80vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            flex-direction: column; 
+        }
+        .hero-banner h1 { font-size: clamp(32px, 5vw, 64px); margin-bottom: 20px; }
+        .hero-banner p { font-size: 18px; margin-bottom: 25px; }
+
+        .cta-btn { padding: 15px 30px; margin: 5px; border-radius: 30px; color: white; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+        .adopt-btn { background-color: #FF782C; }
+        .adopt-btn:hover { transform: scale(1.05); }
+
+        /* About Us */
+        .about-us { background-color: #fff; text-align: center; border-radius: 15px; padding: 40px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 50px; }
+        .about-us p { font-size: 16px; color: #555; }
+
+        /* Volunteer Spotlight */
+        .volunteer-section { background-color: #fdf6f0; border-radius: 15px; padding: 50px 20px; margin-bottom: 50px; }
+        .volunteers { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        .volunteer-card { background: #fff; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; padding: 20px; width: 220px; transition: transform 0.3s; }
+        .volunteer-card:hover { transform: translateY(-10px); }
+        .volunteer-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; }
+        .volunteer-card h4 { margin-bottom: 5px; color: #333; }
+        .volunteer-card p { font-size: 14px; color: #777; }
+
+        /* Pet Tips */
+        .pet-tips { background-color: #f8f9fa; border-radius: 15px; padding: 50px 20px; margin-bottom: 50px; }
+        .tips-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .tip-card { background-color: #fff; border-radius: 15px; padding: 25px; width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; text-align: center; }
+        .tip-card:hover { transform: translateY(-10px); }
+        .tip-card h5 { margin-bottom: 10px; color: #333; }
+        .tip-card p { font-size: 14px; color: #555; }
+
+        /* Upcoming Events */
+        .events-section { background-color: #fff; border-radius: 15px; padding: 50px 20px; }
+        .events-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        .event-card { background-color: #fdf6f0; border-radius: 15px; padding: 25px; width: 260px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; text-align: center; }
+        .event-card:hover { transform: translateY(-10px); }
+        .event-card h5 { margin-bottom: 10px; color: #333; }
+        .event-card p { font-size: 14px; color: #555; }
+        .event-card span { font-weight: 600; color: #FF782C; }
+
+        /* Footer */
+        .footer { background-color: #a2c3c3; color: black; padding: 40px 20px; text-align: center; }
+        .footer a { color: #fff; text-decoration: none; margin: 0 10px; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .volunteers, .tips-grid, .events-grid { flex-direction: column; align-items: center; }
+        }
+		/* Contact Us Section */
+				.contact-us {
+					background-color: #f9f9f9;
+					padding: 60px 20px;
+					text-align: center;
+				}
+
+				.contact-us h2 {
+					font-size: 36px;
+					margin-bottom: 30px;
+					color: #333;
+				}
+
+				.contact-container {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					gap: 50px;
+				}
+
+				.contact-info {
+					flex: 1 1 300px;
+					text-align: left;
+					color: #555;
+					font-size: 18px;
+				}
+
+				.contact-info p {
+					margin: 10px 0;
+				}
+
+				.contact-form {
+					flex: 1 1 300px;
+					text-align: left;
+				}
+
+				.contact-form form {
+					display: flex;
+					flex-direction: column;
+				}
+
+				.contact-form input,
+				.contact-form textarea {
+					padding: 10px;
+					margin-bottom: 15px;
+					border: 1px solid #ccc;
+					border-radius: 5px;
+					width: 100%;
+					font-size: 16px;
+				}
+
+				.contact-form button {
+					padding: 12px;
+					background-color: #ff6f61;
+					color: #fff;
+					border: none;
+					border-radius: 5px;
+					font-size: 18px;
+					cursor: pointer;
+					transition: background 0.3s;
+				}
+
+				.contact-form button:hover {
+					background-color: #ff3b2e;
+				}
+
+				/* Responsive */
+				@media (max-width: 768px) {
+					.contact-container {
+						flex-direction: column;
+						gap: 30px;
+					}
+				}
+
+
+    </style>
+</head>
+<body>
+     
+	
+ 
+	
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <h1>Welcome to Pet Heaven 🐾</h1>
+        <p>Helping pets find loving homes and caring families.</p>
+        <a href="#" class="cta-btn adopt-btn">Adopt a Pet</a>
+    </section>
+
+    <!-- ABOUT US -->
+<section class="section about-us">
+    <h2>About Us</h2>
+    <p>
+        Welcome to Pet Heaven! We are a passionate community dedicated to rescuing, rehabilitating, and rehoming pets in need. Our journey started with a simple mission: to ensure that every animal, no matter its past, finds a loving and safe home.
+    </p>
+    <p>
+        <strong>Our Mission:</strong> To provide compassionate care, support adoption, and educate communities on responsible pet ownership.  
+        <strong>Our Vision:</strong> A world where every pet has a loving family and a secure, happy life.  
+        <strong>Our Values:</strong> Compassion, dedication, transparency, and advocacy for animal welfare.
+    </p>
+    <p>
+        Since our inception, we have successfully rescued over 500 stray and abandoned pets, facilitated more than 300 adoptions, and organized community programs for pet awareness and healthcare. From vaccination drives to educational workshops, we strive to make a meaningful difference in the lives of both pets and people.
+    </p>
+    <p>
+        Join us in our mission to create a brighter future for our furry friends. Whether you adopt, volunteer, or support our initiatives, every effort counts in building a compassionate community for pets.
+    </p>
+</section>
+
+
+    <!-- VOLUNTEER SPOTLIGHT -->
+    <section class="section volunteer-section">
+        <h2>Volunteer Spotlight</h2>
+        <div class="volunteers">
+            <div class="volunteer-card">
+                <img src="./images/volunteer.jpeg" alt="Aarav">
+                <h4>Aarav</h4>
+                <p>Helps feed stray animals every weekend.</p>
+            </div>
+            <div class="volunteer-card">
+                <img src="./images/volunteer2.jpeg" alt="Sneha">
+                <h4>Sneha</h4>
+                <p>Organizes adoption events and fosters pets.</p>
+            </div>
+            <div class="volunteer-card">
+                <img src="./images/volunteer3.jpeg" alt="Rohan">
+                <h4>Rohan</h4>
+                <p>Provides veterinary assistance for rescued pets.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PET TIPS -->
+    <section class="section pet-tips">
+        <h2>Pet Care Tips</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h5>Regular Vet Checkups</h5>
+                <p>Ensure your pets are vaccinated and healthy with regular veterinary visits.</p>
+            </div>
+            <div class="tip-card">
+                <h5>Proper Nutrition</h5>
+                <p>Provide balanced meals suitable for your pet's age, size, and breed.</p>
+            </div>
+            <div class="tip-card">
+                <h5>Exercise & Play</h5>
+                <p>Keep your pets active with daily walks, playtime, and interactive toys.</p>
+            </div>
+            <div class="tip-card">
+                <h5>Grooming</h5>
+                <p>Regularly bathe, brush, and trim your pets to maintain hygiene and coat health.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPCOMING EVENTS -->
+    <section class="section events-section">
+        <h2>Upcoming Events</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <h5>Pet Adoption Drive</h5>
+                <p>Date: <span>Oct 25, 2025</span></p>
+                <p>Location: KPHB Colony, Hyderabad</p>
+            </div>
+            <div class="event-card">
+                <h5>Pet Care Workshop</h5>
+                <p>Date: <span>Nov 10, 2025</span></p>
+                <p>Location: kondapur, Hyderabad</p>
+            </div>
+            <div class="event-card">
+                <h5>Fundraising Gala</h5>
+                <p>Date: <span>Dec 05, 2025</span></p>
+                <p>Location: HitechCity, Hyderabad</p>
+            </div>
+        </div>
+    </section>
+	<!-- CONTACT US -->
+<section class="section contact-us">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Pet Lane, Happy Town, India</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> info@petheaven.org</p>
+        </div>
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Pet Adoption. All Rights Reserved.</p>
+        <p>
+            <a href="petadoptionpage.html">Home</a> | 
+            <a href="#">About</a> | 
+            <a href="#">Contact</a> | 
+            <a href="#">Adopt</a>
+        </p>
+    </footer>
+
+</body>
+</html>

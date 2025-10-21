@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Adoption Application</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #eeeedd;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  h1 {
+    background-color: #005580;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+  }
+  label {
+    font-weight: 600;
+    display: block;
+    margin: 15px 0 8px;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fdfdfd;
+  }
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  button {
+    background:  #6b6b47;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #7a7a52;
+  }
+  footer {
+    background: #005580;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .sidebar {
+  position: fixed;            /* keeps it static even when scrolling */
+  top: 50%;                   /* middle of the page vertically */
+  left: 20px;                 /* slight space from the left edge */
+  transform: translateY(-50%);/* centers the whole sidebar vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;                  /* space between lines */
+  z-index: 1000;              /* keeps it on top */
+}
+
+/* each line (the clickable link) */
+.sidebar a {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.sidebar a:hover {
+  width: 30px;
+  background-color: #333;
+}
+</style>
+</head>
+
+<body>
+<div class="sidebar">
+  <a href="petadoptionpage.html"></a>
+ 
+  <a href="WelcomeHome.html"></a>
+  <a href="shop.html"></a>
+  <a href="contact.html"></a>
+</div>
+
+<h1>🐾 Pet Adoption Application Form 🐾</h1>
+
+<form action="#" method="post">
+  <label for="fullname">Full Name</label>
+  <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+  <label for="address">Address</label>
+  <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+
+  <label for="pet">Choose Pet Type</label>
+  <select id="pet" name="pet" required>
+    <option value="">-- Select a Pet --</option>
+    <option>Rabbit</option>
+    <option>Parrot</option>
+    <option>Fish</option>
+    <option>Duck</option>
+    <option>Tortoise</option>
+    <option>Hamster</option>
+    <option>Mammals</option>
+    <option>Birds</option>
+  </select>
+
+  <label for="reason">Why do you want to adopt this pet?</label>
+  <textarea id="reason" name="reason" placeholder="Write a short answer..." required></textarea>
+
+  <label for="experience">Do you have any previous pet experience?</label>
+  <select id="experience" name="experience" required>
+    <option value="">-- Select an Option --</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+
+  <button type="submit">Submit Application</button>
+</form>
+
+<footer>
+  © 2025 Pet Adoption | Designed with ❤️ for Animal Lovers
+</footer>
+
+</body>
+</html>

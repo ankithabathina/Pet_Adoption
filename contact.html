@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .contact-left, .contact-right {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .contact-left h3, .contact-right h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .contact-left p {
+            line-height: 1.6;
+            color: #555;
+        }
+        .contact-left iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            margin-top: 15px;
+        }
+        .contact-right form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-right input, 
+        .contact-right textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-right button {
+            padding: 12px;
+            background:#E9967A;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-right button:hover {
+            background: #e6e6ff;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .newsletter input[type="email"] {
+            padding: 8px;
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 5px;
+        }
+        .newsletter button {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: none;
+            background:#E9967A;
+            color: white;
+            cursor: pointer;
+        }
+		.sidebar {
+  position: fixed;            /* keeps it static even when scrolling */
+  top: 50%;                   /* middle of the page vertically */
+  left: 20px;                 /* slight space from the left edge */
+  transform: translateY(-50%);/* centers the whole sidebar vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;                  /* space between lines */
+  z-index: 1000;              /* keeps it on top */
+}
+
+/* each line (the clickable link) */
+.sidebar a {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.sidebar a:hover {
+  width: 30px;
+  background-color: #333;
+}
+    </style>
+</head>
+<body>
+<div class="sidebar">
+  <a href="petadoptionpage.html"></a>
+ 
+  <a href="WelcomeHome.html"></a>
+  <a href="shop.html"></a>
+  <a href="contact.html"></a>
+</div>
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you!</p>
+    </header>
+
+    <div class="contact-container">
+        <!-- Left Column -->
+        <div class="contact-left">
+            <h3>Contact Details</h3>
+            <p><strong>Address:</strong> 123 Pet Street, City, Country</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Email:</strong> info@petadoption.com</p>
+
+            <h3>Find Us Here</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-122.41941548468215!3d37.77492977975827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c1234567%3A0xabcdef12345678!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1699999999999" 
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- Right Column -->
+        <div class="contact-right">
+            <h3>Send Us a Message</h3>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer: Social + Newsletter -->
+    <footer>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-x"></i></a>
+        </div>
+        <div class="newsletter" style="margin-top:10px;">
+            <input type="email" placeholder="Subscribe to Newsletter">
+            <button>Subscribe</button>
+        </div>
+        <p style="margin-top:15px;">&copy; 2025 Pet Adoption. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

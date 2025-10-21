@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Srinivas | Veterinarian</title>
+
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Poppins', sans-serif; line-height:1.6; background:#fffaf5; color:#333; }
+
+  header {
+    background:#ffb3b3;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+  }
+  header h1 { font-size:2.5rem; margin-bottom:10px; }
+  header p { font-size:1.2rem; }
+
+  .content { max-width:1000px; margin:40px auto; padding:0 20px; }
+
+  /* About Section */
+  .about {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    align-items:center;
+    margin-bottom:50px;
+  }
+  .about img {
+    width:250px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  }
+  .about-text {
+    flex:1;
+    min-width:250px;
+  }
+  .about-text h2 { color:#ff944d; margin-bottom:10px; }
+  .about-text p { color:#555; font-size:1.05rem; margin-bottom:10px; }
+
+  /* Services Section */
+  .services {
+    margin-bottom:50px;
+  }
+  .services h2 {
+    text-align:center;
+    color:#ff944d;
+    margin-bottom:30px;
+  }
+  .service-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+  .service-box {
+    background:#fff;
+    border-radius:12px;
+    padding:25px 20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+    transition: transform 0.3s;
+  }
+  .service-box:hover { transform:scale(1.05); }
+  .service-box h3 { color:#ff944d; margin-bottom:12px; }
+  .service-box p { color:#555; }
+
+  /* Contact Section */
+  .contact {
+    margin-bottom:50px;
+    background:#fff5e6;
+    padding:30px 20px;
+    border-radius:12px;
+    text-align:center;
+  }
+  .contact h2 { color:#ff944d; margin-bottom:20px; }
+  .contact p { margin-bottom:15px; }
+  .contact a {
+    display:inline-block;
+    padding:12px 25px;
+    background:#ff944d;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition: background 0.3s;
+  }
+  .contact a:hover { background:#ff7a1f; }
+
+  footer {
+    background: #ffb3b3;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+  }
+
+  @media(max-width:700px) {
+    .about { flex-direction:column; align-items:center; }
+    .about img { width:70%; }
+  }
+  .sidebar {
+  position: fixed;            /* keeps it static even when scrolling */
+  top: 50%;                   /* middle of the page vertically */
+  left: 20px;                 /* slight space from the left edge */
+  transform: translateY(-50%);/* centers the whole sidebar vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;                  /* space between lines */
+  z-index: 1000;              /* keeps it on top */
+}
+
+/* each line (the clickable link) */
+.sidebar a {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.sidebar a:hover {
+  width: 30px;
+  background-color: #333;
+}
+</style>
+</head>
+
+<body>
+ <div class="sidebar">
+  <a href="petadoptionpage.html"></a>
+  
+  <a href="WelcomeHome.html"></a>
+  <a href="shop.html"></a>
+  <a href="contact.html"></a>
+</div>
+
+<header>
+  <h1>Dr. Srinivas</h1>
+  <p>Veterinarian | Expert in Animal Health & Wellness</p>
+</header>
+
+<div class="content">
+
+  <!-- About Section -->
+  <section class="about">
+    <img src="./images/team2.jpeg" alt="Dr. Srinivas">
+    <div class="about-text">
+      <h2>About Dr. Srinivas</h2>
+      <p>Dr. Srinivas is a dedicated Veterinarian with years of experience in caring for pets of all types. From routine check-ups to emergency care, he ensures every animal receives the highest level of attention and treatment.</p>
+      <p>He specializes in preventive care, vaccinations, surgeries, and wellness programs, making sure your pets live happy, healthy lives.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Veterinary Services</h2>
+    <div class="service-grid">
+      <div class="service-box">
+        <h3>Routine Checkups</h3>
+        <p>Regular health assessments to keep pets in optimal condition.</p>
+      </div>
+      <div class="service-box">
+        <h3>Vaccinations</h3>
+        <p>Protect your pets against common diseases with our immunization programs.</p>
+      </div>
+      <div class="service-box">
+        <h3>Surgical Care</h3>
+        <p>Safe and precise surgical procedures for various health needs.</p>
+      </div>
+      <div class="service-box">
+        <h3>Emergency Care</h3>
+        <p>Immediate attention and treatment for critical situations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Consult with Dr. Srinivas</h2>
+    <p>Schedule an appointment or ask questions about your pet’s health. Dr. Srinivas is here to guide you.</p>
+    <a href="contact.html">Contact Now</a>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 Dr. Srinivas | Veterinarian
+</footer>
+
+</body>
+</html>
