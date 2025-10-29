@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All Pets Gallery </title>
+  <style>
+    :root{
+      --bg:#f9fafb;
+      --card-bg:#fff;
+      --gap:18px;
+      --max-card-width:220px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#222;
+      line-height:1.2;
+      padding-bottom:60px;
+    }
+    header{padding:36px 20px 10px;text-align:center}
+    header h1{font-size:2rem;margin-bottom:6px}
+    header p{color:#666;font-size:0.95rem}
+
+    section{margin:36px auto 0;max-width:1200px}
+    section h2{
+      text-align:center;font-size:1.6rem;margin:24px 16px;color:#1f2937;font-weight:700;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap:var(--gap);
+      padding: 0 18px 28px;
+      align-items:start;
+      justify-items:center;
+    }
+    .card{
+      background:var(--card-bg);
+      width:100%;
+      max-width:var(--max-card-width);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(16,24,40,0.08);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{ transform:translateY(-6px); box-shadow:0 10px 30px rgba(16,24,40,0.12); }
+    .card img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      display:block;
+    }
+    .meta{padding:10px 12px 14px;text-align:center}
+    .meta h4{font-size:1rem;margin-bottom:6px;color:#111;font-weight:600}
+    .meta p{margin:0;color:#666;font-size:0.88rem}
+
+    hr.section-sep{
+      border:0;height:1px;background:#e9eef4;margin:28px 0 6px;
+      max-width:1200px;margin-left:auto;margin-right:auto;
+    }
+
+    /* responsive tweaks */
+    @media (min-width:1100px){
+      :root{ --max-card-width:240px; }
+      .card img{ height:180px }
+    }
+    @media (max-width:420px){
+      .card img{ height:140px }
+    }
+	
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+ <nav style="background-color: #fff; padding: 10px 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto;">
+    <!-- Logo -->
+    <a href="petadoptionpage.html" style="text-decoration: none; font-size: 1.5rem; font-weight: 700; color: #333;">
+      🐾 PetAdopt
+    </a>
+
+    <!-- Links -->
+    <div>
+      <a href="petadoptionpage.html" style="margin: 0 10px; text-decoration: none; color: #333;">Home</a>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+  <header>
+    <h1>All Pets Gallery</h1>
+    
+  </header>
+ 
+
+  <!-- ---------- RABBITS (15) ---------- -->
+  <section>
+    <h2>🐇 Rabbits</h2>
+    <div class="gallery">
+      <!-- Using Unsplash source with different sig values to get distinct images -->
+      <div class="card"><img src="images/rabbit1.jpeg" alt="rabbit1"><div class="meta"><h4>Snowball</h4><p>White Rabbit</p></div></div>
+      <div class="card"><img src="images/rabbit2.jpeg" alt="rabbit2"><div class="meta"><h4>Thumper</h4><p>Lionhead</p></div></div>
+      <div class="card"><img src="images/rabbit3.jpeg" alt="rabbit3"><div class="meta"><h4>Hazel</h4><p>Mini Lop</p></div></div>
+      <div class="card"><img src="images/rabbit4.jpeg" alt="rabbit4"><div class="meta"><h4>Marshmallow</h4><p>Angora</p></div></div>
+      <div class="card"><img src="images/rabbit5.jpeg" alt="rabbit5"><div class="meta"><h4>Oreo</h4><p>Dutch</p></div></div>
+      <div class="card"><img src="images/rabbit6.jpeg" alt="rabbit6"><div class="meta"><h4>Lily</h4><p>Holland Lop</p></div></div>
+      <div class="card"><img src="images/rabbit7.jpeg" alt="rabbit7"><div class="meta"><h4>Honey</h4><p>English Spot</p></div></div>
+      <div class="card"><img src="images/rabbit8.jpeg" alt="rabbit8"><div class="meta"><h4>Cloud</h4><p>Mini Rex</p></div></div>
+      <div class="card"><img src="images/rabbit9.jpeg" alt="rabbit9"><div class="meta"><h4>Bunny</h4><p>Mixed</p></div></div>
+      <div class="card"><img src="images/rabbit10.jpeg" alt="rabbit10"><div class="meta"><h4>Daisy</h4><p>Netherland Dwarf</p></div></div>
+      <div class="card"><img src="images/rabbit11.jpeg" alt="rabbit11"><div class="meta"><h4>Choco</h4><p>Mini Lop</p></div></div>
+      <div class="card"><img src="images/rabbit12.jpeg" alt="rabbit12"><div class="meta"><h4>Mocha</h4><p>Rex</p></div></div>
+      <div class="card"><img src="images/rabbit13.jpeg" alt="rabbit13"><div class="meta"><h4>Butter</h4><p>Dutch</p></div></div>
+      <div class="card"><img src="images/rabbit14.jpeg" alt="rabbit14"><div class="meta"><h4>Velvet</h4><p>Havana</p></div></div>
+      <div class="card"><img src="images/rabbit15.jpeg" alt="rabbit15"><div class="meta"><h4>Peanut</h4><p>Netherland Dwarf</p></div></div>
+    </div>
+  </section>
+
+  <hr class="section-sep">
+
+  <!-- ---------- PARROTS (15) ---------- -->
+  <section>
+    <h2>🦜 Parrots </h2>
+    <div class="gallery">
+      <div class="card"><img src="images/parrot1.jpeg" alt="parrot1"><div class="meta"><h4>Rio</h4><p>Macaw</p></div></div>
+      <div class="card"><img src="images/parrot2.jpeg" alt="parrot2"><div class="meta"><h4>Kiwi</h4><p>Lovebird</p></div></div>
+      <div class="card"><img src="images/parrot3.jpeg" alt="parrot3"><div class="meta"><h4>Sunny</h4><p>Cockatiel</p></div></div>
+      <div class="card"><img src="images/parrot4.jpeg" alt="parrot4"><div class="meta"><h4>Blue</h4><p>Budgerigar</p></div></div>
+      <div class="card"><img src="images/parrot5.jpeg" alt="parrot5"><div class="meta"><h4>Mango</h4><p>Sun Conure</p></div></div>
+      <div class="card"><img src="images/parrot6.jpeg" alt="parrot6"><div class="meta"><h4>Skittles</h4><p>Parrotlet</p></div></div>
+      <div class="card"><img src="images/parrot7.jpeg" alt="parrot7"><div class="meta"><h4>Polly</h4><p>Amazon</p></div></div>
+      <div class="card"><img src="images/parrot8.jpeg" alt="parrot8"><div class="meta"><h4>Peach</h4><p>Lovebird</p></div></div>
+      <div class="card"><img src="images/parrot9.jpeg" alt="parrot9"><div class="meta"><h4>Tango</h4><p>African Grey</p></div></div>
+      <div class="card"><img src="images/parrot10.jpeg" alt="parrot10"><div class="meta"><h4>Pico</h4><p>Macaw</p></div></div>
+      <div class="card"><img src="images/parrot11.jpeg" alt="parrot11"><div class="meta"><h4>Niki</h4><p>Quaker</p></div></div>
+      <div class="card"><img src="images/parrot12.jpeg" alt="parrot12"><div class="meta"><h4>Sunny2</h4><p>Eclectus</p></div></div>
+      <div class="card"><img src="images/parrot13.jpeg" alt="parrot13"><div class="meta"><h4>Chirpy</h4><p>Budgie</p></div></div>
+      <div class="card"><img src="images/parrot14.jpeg" alt="parrot14"><div class="meta"><h4>Ruby</h4><p>Macaw</p></div></div>
+      <div class="card"><img src="images/parrot15.jpeg" alt="parrot15"><div class="meta"><h4>Minty</h4><p>Quaker</p></div></div>
+    </div>
+  </section>
+
+  <hr class="section-sep">
+
+  <!-- ---------- FISH (15) ---------- -->
+  <section>
+    <h2>🐠 Fish </h2>
+    <div class="gallery">
+      <div class="card"><img src="images/fish1.jpeg" alt="fish1"><div class="meta"><h4>Bubbles</h4><p>Goldfish</p></div></div>
+      <div class="card"><img src="images/fish2.jpeg" alt="fish2"><div class="meta"><h4>Finny</h4><p>Betta</p></div></div>
+      <div class="card"><img src="images/fish3.jpeg" alt="fish3"><div class="meta"><h4>Splash</h4><p>Koi</p></div></div>
+      <div class="card"><img src="images/fish4.jpeg" alt="fish4"><div class="meta"><h4>Coral</h4><p>Clownfish</p></div></div>
+      <div class="card"><img src="images/fish5.jpeg" alt="fish5"><div class="meta"><h4>Bluey</h4><p>Blue Tang</p></div></div>
+      <div class="card"><img src="images/fish6.jpeg" alt="fish6"><div class="meta"><h4>Goldie</h4><p>Comet</p></div></div>
+      <div class="card"><img src="images/fish7.jpeg" alt="fish7"><div class="meta"><h4>Shimmer</h4><p>Guppy</p></div></div>
+      <div class="card"><img src="images/fish8.jpeg" alt="fish8"><div class="meta"><h4>Angel</h4><p>Angelfish</p></div></div>
+      <div class="card"><img src="images/fish9.jpeg" alt="fish9"><div class="meta"><h4>Pearl</h4><p>Molly</p></div></div>
+      <div class="card"><img src="images/fish10.jpeg" alt="fish10"><div class="meta"><h4>Flash</h4><p>Neon Tetra</p></div></div>
+      <div class="card"><img src="images/fish11.jpeg" alt="fish11"><div class="meta"><h4>Sunny</h4><p>Platy</p></div></div>
+      <div class="card"><img src="images/fish12.jpeg" alt="fish12"><div class="meta"><h4>Ruby</h4><p>Gourami</p></div></div>
+      <div class="card"><img src="images/fish13.jpeg" alt="fish13"><div class="meta"><h4>Glitter</h4><p>Discus</p></div></div>
+      <div class="card"><img src="images/fish14.jpeg" alt="fish14"><div class="meta"><h4>Sandy</h4><p>Cichlid</p></div></div>
+      <div class="card"><img src="images/fish15.jpeg" alt="fish15"><div class="meta"><h4>Fin</h4><p>Catfish</p></div></div>
+    </div>
+  </section>
+
+  <hr class="section-sep">
+
+  <!-- ---------- DUCKS (15) ---------- -->
+  <section>
+    <h2>🦆 Ducks </h2>
+    <div class="gallery">
+      <div class="card"><img src="images/duck1.jpeg" alt="duck1"><div class="meta"><h4>Daffy</h4><p>Mallard</p></div></div>
+      <div class="card"><img src="images/duck2.jpeg" alt="duck2"><div class="meta"><h4>Quacky</h4><p>Pekin</p></div></div>
+      <div class="card"><img src="images/duck3.jpeg" alt="duck3"><div class="meta"><h4>Donald</h4><p>Muscovy</p></div></div>
+      <div class="card"><img src="images/duck4.jpeg" alt="duck4"><div class="meta"><h4>Daisy</h4><p>Runner</p></div></div>
+      <div class="card"><img src="images/duck5.jpeg" alt="duck5"><div class="meta"><h4>Snow</h4><p>Pekin</p></div></div>
+      <div class="card"><img src="images/duck6.jpeg" alt="duck6"><div class="meta"><h4>Milo</h4><p>Indian Runner</p></div></div>
+      <div class="card"><img src="images/duck7.jpeg" alt="duck7"><div class="meta"><h4>Peanut</h4><p>Cayuga</p></div></div>
+      <div class="card"><img src="images/duck8.jpeg" alt="duck8"><div class="meta"><h4>Sky</h4><p>Rouen</p></div></div>
+      <div class="card"><img src="images/duck9.jpeg" alt="duck9"><div class="meta"><h4>Lulu</h4><p>Khaki Campbell</p></div></div>
+      <div class="card"><img src="images/duck10.jpeg" alt="duck10"><div class="meta"><h4>Flash</h4><p>Call Duck</p></div></div>
+      <div class="card"><img src="images/duck11.jpeg" alt="duck11"><div class="meta"><h4>Puddle</h4><p>Pet Duck</p></div></div>
+      <div class="card"><img src="images/duck12.jpeg" alt="duck12"><div class="meta"><h4>Breeze</h4><p>Farm</p></div></div>
+      <div class="card"><img src="images/duck13.jpeg" alt="duck13"><div class="meta"><h4>Waddles</h4><p>Pet</p></div></div>
+      <div class="card"><img src="images/duck14.jpeg" alt="duck14"><div class="meta"><h4>Feather</h4><p>Domestic</p></div></div>
+      <div class="card"><img src="images/duck15.jpeg" alt="duck15"><div class="meta"><h4>Quill</h4><p>Mallard Mix</p></div></div>
+    </div>
+  </section>
+
+  <hr class="section-sep">
+
+  <!-- ---------- TORTOISES (15) ---------- -->
+  <section>
+    <h2>🐢 Tortoises & Turtles </h2>
+    <div class="gallery">
+      <div class="card"><img src="images/tor1.jpeg" alt="tortoise1"><div class="meta"><h4>Rocky</h4><p>Indian Star</p></div></div>
+      <div class="card"><img src="images/tor2.jpeg" alt="tortoise2"><div class="meta"><h4>Speedy</h4><p>Box Turtle</p></div></div>
+      <div class="card"><img src="images/tor3.jpeg" alt="tortoise3"><div class="meta"><h4>Shell</h4><p>Red-eared Slider</p></div></div>
+      <div class="card"><img src="images/tor4.jpeg" alt="tortoise4"><div class="meta"><h4>Pebble</h4><p>Desert</p></div></div>
+      <div class="card"><img src="images/tor5.jpeg" alt="tortoise5"><div class="meta"><h4>Tank</h4><p>Giant</p></div></div>
+      <div class="card"><img src="images/tor6.jpeg" alt="tortoise6"><div class="meta"><h4>Shells</h4><p>Aquatic</p></div></div>
+      <div class="card"><img src="images/tor7.jpeg" alt="tortoise7"><div class="meta"><h4>Shelly</h4><p>Pet Turtle</p></div></div>
+      <div class="card"><img src="images/tor8.jpeg" alt="tortoise8"><div class="meta"><h4>Mini</h4><p>Baby</p></div></div>
+      <div class="card"><img src="images/tor9.jpeg" alt="tortoise9"><div class="meta"><h4>Drift</h4><p>Pond Turtle</p></div></div>
+      <div class="card"><img src="images/tor9.jpeg" alt="tortoise10"><div class="meta"><h4>Crust</h4><p>Forest</p></div></div>
+      <div class="card"><img src="images/tor10.jpeg" alt="tortoise11"><div class="meta"><h4>Turtly</h4><p>Slider</p></div></div>
+      <div class="card"><img src="images/tor11.jpeg" alt="tortoise12"><div class="meta"><h4>Atlas</h4><p>Sulcata</p></div></div>
+      <div class="card"><img src="images/tor12.jpeg" alt="tortoise13"><div class="meta"><h4>Patch</h4><p>Pattern</p></div></div>
+      <div class="card"><img src="images/tor13.jpeg" alt="tortoise14"><div class="meta"><h4>Goliath</h4><p>Large</p></div></div>
+      <div class="card"><img src="images/tor14.jpeg" alt="tortoise15"><div class="meta"><h4>Shelldon</h4><p>Pet</p></div></div>
+    </div>
+  </section>
+
+  <hr class="section-sep">
+
+  <!-- ---------- HAMSTERS (15) ---------- -->
+  <section>
+    <h2>🐹 Hamsters </h2>
+    <div class="gallery">
+      <div class="card"><img src="images/ham1.jpeg" alt="hamster1"><div class="meta"><h4>Puff</h4><p>Syrian</p></div></div>
+      <div class="card"><img src="images/ham2.jpeg" alt="hamster2"><div class="meta"><h4>Cookie</h4><p>Dwarf</p></div></div>
+      <div class="card"><img src="images/ham3.jpeg" alt="hamster3"><div class="meta"><h4>Nibbles</h4><p>Syrian</p></div></div>
+      <div class="card"><img src="images/ham4.jpeg" alt="hamster4"><div class="meta"><h4>Peanut</h4><p>Dwarf</p></div></div>
+      <div class="card"><img src="images/ham5.jpeg" alt="hamster5"><div class="meta"><h4>Fuzz</h4><p>Syrian</p></div></div>
+      <div class="card"><img src="images/ham6.jpeg" alt="hamster6"><div class="meta"><h4>Whisk</h4><p>Pet</p></div></div>
+      <div class="card"><img src="images/ham7.jpeg" alt="hamster7"><div class="meta"><h4>Buttons</h4><p>Baby</p></div></div>
+      <div class="card"><img src="images/ham8.jpeg" alt="hamster8"><div class="meta"><h4>Pip</h4><p>Dwarf</p></div></div>
+      <div class="card"><img src="images/ham9.jpeg" alt="hamster9"><div class="meta"><h4>Chunk</h4><p>Syrian</p></div></div>
+      <div class="card"><img src="images/ham10.jpeg" alt="hamster10"><div class="meta"><h4>Snug</h4><p>Pet</p></div></div>
+      <div class="card"><img src="images/ham11.jpeg" alt="hamster11"><div class="meta"><h4>Toast</h4><p>Syrian</p></div></div>
+      <div class="card"><img src="images/ham12.jpeg" alt="hamster12"><div class="meta"><h4>Cheeks</h4><p>Dwarf</p></div></div>
+      <div class="card"><img src="images/ham13.jpeg" alt="hamster13"><div class="meta"><h4>Fluff</h4><p>Syrian</p></div></div>
+      <div class="card"><img src="images/ham14.jpeg" alt="hamster14"><div class="meta"><h4>Sprout</h4><p>Dwarf</p></div></div>
+      <div class="card"><img src="images/ham15.jpeg" alt="hamster15"><div class="meta"><h4>Pocket</h4><p>Pet</p></div></div>
+    </div>
+  </section>
+
+  <hr class="section-sep">
+
+  <!-- ---------- MINI PIGS (15) ---------- -->
+  <section>
+    <h2>🐷 Mammals </h2>
+    <div class="gallery">
+      <div class="card"><img src="images/mam1.jpeg" alt="pig1"><div class="meta"><h4>Piglet</h4><p>Mini Pig</p></div></div>
+      <div class="card"><img src="images/mam2.jpeg" alt="pig2"><div class="meta"><h4>Rosie</h4><p>Baby Pig</p></div></div>
+      <div class="card"><img src="images/mam3.jpeg" alt="pig3"><div class="meta"><h4>Bacon</h4><p>Mini</p></div></div>
+      <div class="card"><img src="images/mam4.jpeg" alt="pig4"><div class="meta"><h4>Truffle</h4><p>Pet Pig</p></div></div>
+      <div class="card"><img src="images/mam5.jpeg" alt="pig5"><div class="meta"><h4>Rosy</h4><p>Pet</p></div></div>
+      <div class="card"><img src="images/mam6.jpeg" alt="pig6"><div class="meta"><h4>Squeak</h4><p>Mini</p></div></div>
+      <div class="card"><img src="images/mam7.jpeg" alt="pig7"><div class="meta"><h4>Dew</h4><p>Baby</p></div></div>
+      <div class="card"><img src="images/mam8.jpeg" alt="pig8"><div class="meta"><h4>Plum</h4><p>Mini</p></div></div>
+      <div class="card"><img src="images/mam9.jpeg" alt="pig9"><div class="meta"><h4>Button</h4><p>Pet Pig</p></div></div>
+      <div class="card"><img src="images/mam10.jpeg" alt="pig10"><div class="meta"><h4>HazelPig</h4><p>Mini</p></div></div>
+      <div class="card"><img src="images/mam11.jpeg" alt="pig11"><div class="meta"><h4>Dot</h4><p>Pet</p></div></div>
+      <div class="card"><img src="images/mam12.jpeg" alt="pig12"><div class="meta"><h4>Sprig</h4><p>Piglet</p></div></div>
+      <div class="card"><img src="images/mam13.jpeg" alt="pig13"><div class="meta"><h4>Twix</h4><p>Mini</p></div></div>
+      <div class="card"><img src="images/mam14.jpeg" alt="pig14"><div class="meta"><h4>Moppet</h4><p>Baby</p></div></div>
+      <div class="card"><img src="images/mam15.jpeg" alt="pig15"><div class="meta"><h4>Nibble</h4><p>Mini Pig</p></div></div>
+    </div>
+  </section>
+
+  <hr class="section-sep">
+
+  <!-- ---------- DIFFERENT BIRDS (15) ---------- -->
+  <section>
+    <h2>🐦 Different Birds </h2>
+    <div class="gallery">
+      <div class="card"><img src="images/b1.jpeg" alt="bird1"><div class="meta"><h4>Sky</h4><p>Bluebird</p></div></div>
+      <div class="card"><img src="images/b2.jpeg" alt="bird2"><div class="meta"><h4>Chirpy</h4><p>Sparrow</p></div></div>
+      <div class="card"><img src="images/b3.jpeg" alt="bird3"><div class="meta"><h4>Whisper</h4><p>Owl</p></div></div>
+      <div class="card"><img src="images/b4.jpeg" alt="bird4"><div class="meta"><h4>Gale</h4><p>Seabird</p></div></div>
+      <div class="card"><img src="images/b5.jpeg" alt="bird5"><div class="meta"><h4>Melody</h4><p>Songbird</p></div></div>
+      <div class="card"><img src="images/b6.jpeg" alt="bird6"><div class="meta"><h4>Tap</h4><p>Woodpecker</p></div></div>
+      <div class="card"><img src="images/b7.jpeg" alt="bird7"><div class="meta"><h4>Flash</h4><p>Kingfisher</p></div></div>
+      <div class="card"><img src="images/b8.jpeg" alt="bird8"><div class="meta"><h4>Wade</h4><p>Heron</p></div></div>
+      <div class="card"><img src="images/b9.jpeg" alt="bird9"><div class="meta"><h4>Pip</h4><p>Pigeon</p></div></div>
+      <div class="card"><img src="images/b10.jpeg" alt="bird10"><div class="meta"><h4>Skim</h4><p>Swallow</p></div></div>
+      <div class="card"><img src="images/b11.jpeg" alt="bird11"><div class="meta"><h4>Blush</h4><p>Flamingo</p></div></div>
+      <div class="card"><img src="images/b12.jpeg" alt="bird12"><div class="meta"><h4>Shade</h4><p>Crow</p></div></div>
+      <div class="card"><img src="images/b13.jpeg" alt="bird13"><div class="meta"><h4>Aerie</h4><p>Eagle</p></div></div>
+      <div class="card"><img src="images/b14.jpeg" alt="bird14"><div class="meta"><h4>Ripple</h4><p>Waterbird</p></div></div>
+      <div class="card"><img src="images/b15.jpeg" alt="bird15"><div class="meta"><h4>Spar</h4><p>Pet Bird</p></div></div>
+    </div>
+  </section>
+
+  <footer style="text-align:center;margin-top:40px;color:#666;font-size:0.9rem">
+    
+  </footer>
+
+</body>
+</html>
